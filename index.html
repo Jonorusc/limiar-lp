@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Limiar — Charge limit for Mac that works on macOS 27</title>
+  <meta name="description" content="Limiar stops your MacBook from charging past the level you choose. The MagSafe light turns green while it's paused. Free and open source for Apple Silicon on macOS 26 and 27.">
+  <link rel="canonical" href="https://limiar.vercel.app/">
+  <meta name="theme-color" content="#0B2F2A">
+  <meta name="color-scheme" content="light dark">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Limiar">
+  <meta property="og:url" content="https://limiar.vercel.app/">
+  <meta property="og:title" content="Limiar — Charge limit for Mac that works on macOS 27">
+  <meta property="og:description" content="Stop charging at the level you choose. The MagSafe light turns green while it's paused. Free and open source.">
+  <meta property="og:image" content="https://limiar.vercel.app/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Limiar app icon: a battery with a glowing line at 80%">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Limiar — Charge limit for Mac that works on macOS 27">
+  <meta name="twitter:description" content="Stop charging at the level you choose. The MagSafe light turns green while it's paused. Free and open source.">
+  <meta name="twitter:image" content="https://limiar.vercel.app/assets/og-image.png">
+
+  <link rel="icon" type="image/png" href="/assets/favicon.png">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="/styles.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Limiar",
+    "operatingSystem": "macOS 26 or later",
+    "applicationCategory": "UtilitiesApplication",
+    "description": "Charge limiter for Apple Silicon MacBooks that works on macOS 27. Stops charging at a level you choose and turns the MagSafe light green while paused.",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "license": "https://opensource.org/licenses/MIT",
+    "codeRepository": "https://github.com/Jonorusc/limiar",
+    "image": "https://limiar.vercel.app/assets/icon-512.png"
+  }
+  </script>
+  <script src="/i18n.js" defer></script>
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="skip">Skip to content</a>
+
+  <header class="nav" id="top">
+    <div class="nav__inner">
+      <a class="brand" href="#top" aria-label="Limiar home">
+        <img src="/assets/icon.png" width="28" height="28" alt="">
+        <span>Limiar</span>
+      </a>
+      <nav class="nav__links" aria-label="Sections">
+        <a href="#features" data-i18n="nav.features">Features</a>
+        <a href="#how" data-i18n="nav.how">How it works</a>
+        <a href="#faq" data-i18n="nav.faq">FAQ</a>
+      </nav>
+      <div class="nav__actions">
+        <button class="lang" type="button" data-lang-toggle aria-label="Mudar para português">PT</button>
+        <a class="star-pill" href="https://github.com/Jonorusc/limiar" target="_blank" rel="noopener">
+          <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+          <span data-i18n="nav.star">Star</span>
+          <span class="star-pill__count" data-stars hidden></span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="threshold" aria-hidden="true"></div>
+      <img class="hero__icon" src="/assets/icon-512.png" width="128" height="128" alt="Limiar app icon">
+      <p class="eyebrow" data-i18n="hero.eyebrow">For Apple Silicon MacBooks · macOS 27 ready</p>
+      <h1 class="hero__title" data-i18n-html="hero.title">Your Mac stops charging<br>where you tell it to.</h1>
+      <p class="hero__lead" data-i18n="hero.lead">macOS says “Will charge to 80%” — and then charges to 100%. Limiar actually holds the line, and your MagSafe light turns green to prove it.</p>
+      <div class="hero__cta">
+        <a class="btn btn--primary" data-download href="https://github.com/Jonorusc/limiar/releases/latest">
+          <svg viewBox="0 0 17 20" width="15" height="18" aria-hidden="true"><path fill="currentColor" d="M14.1 10.6c0-2.6 2.1-3.8 2.2-3.9-1.2-1.8-3.1-2-3.7-2-1.6-.2-3.1.9-3.9.9-.8 0-2-.9-3.4-.9-1.7 0-3.3 1-4.2 2.6-1.8 3.1-.5 7.7 1.3 10.2.9 1.2 1.9 2.6 3.2 2.6 1.3-.1 1.8-.8 3.3-.8 1.6 0 2 .8 3.4.8 1.4 0 2.3-1.3 3.1-2.5 1-1.4 1.4-2.8 1.4-2.9 0 0-2.7-1-2.7-4.1zM11.6 3c.7-.9 1.2-2 1-3.2-1 .1-2.2.7-2.9 1.6-.6.7-1.2 1.9-1 3.1 1.1.1 2.2-.6 2.9-1.5z"/></svg>
+          <span data-i18n="hero.download">Download for Mac</span>
+        </a>
+        <a class="btn btn--glass" href="https://github.com/Jonorusc/limiar" target="_blank" rel="noopener">
+          <span data-i18n="hero.github">View on GitHub</span>
+          <span class="btn__stars" data-stars-inline hidden></span>
+        </a>
+      </div>
+      <p class="hero__meta"><span data-version>Free</span> · <span data-i18n="hero.meta">macOS 26+ · Apple Silicon · Open source (MIT)</span></p>
+
+      <!-- Interactive replica of the app -->
+      <figure class="stage" aria-label="Interactive preview of Limiar" data-stage>
+        <div class="desktop">
+          <div class="menubar">
+            <div class="menubar__left" aria-hidden="true">
+              <svg viewBox="0 0 17 20" width="12" height="14"><path fill="currentColor" d="M14.1 10.6c0-2.6 2.1-3.8 2.2-3.9-1.2-1.8-3.1-2-3.7-2-1.6-.2-3.1.9-3.9.9-.8 0-2-.9-3.4-.9-1.7 0-3.3 1-4.2 2.6-1.8 3.1-.5 7.7 1.3 10.2.9 1.2 1.9 2.6 3.2 2.6 1.3-.1 1.8-.8 3.3-.8 1.6 0 2 .8 3.4.8 1.4 0 2.3-1.3 3.1-2.5 1-1.4 1.4-2.8 1.4-2.9 0 0-2.7-1-2.7-4.1zM11.6 3c.7-.9 1.2-2 1-3.2-1 .1-2.2.7-2.9 1.6-.6.7-1.2 1.9-1 3.1 1.1.1 2.2-.6 2.9-1.5z"/></svg>
+              <b>Finder</b><span>File</span><span>Edit</span><span>View</span>
+            </div>
+            <div class="menubar__right">
+              <span class="mb-battery" data-mb-battery aria-hidden="true">
+                <span class="mb-battery__fill" data-mb-fill></span>
+                <span class="mb-battery__num" data-mb-num>80</span>
+              </span>
+              <svg viewBox="0 0 20 14" width="16" height="12" aria-hidden="true"><path fill="currentColor" d="M10 3.2c2.6 0 5 1 6.8 2.7l1.4-1.5C16 2.3 13.1 1 10 1S4 2.3 1.8 4.4l1.4 1.5C5 4.2 7.4 3.2 10 3.2zm0 4.2c1.5 0 2.9.6 4 1.6l1.4-1.5c-1.4-1.4-3.4-2.3-5.4-2.3S6 6.1 4.6 7.5L6 9c1.1-1 2.5-1.6 4-1.6zm0 4.1c.5 0 1 .2 1.3.5L10 13.4 8.7 12c.3-.3.8-.5 1.3-.5z"/></svg>
+              <span class="menubar__clock" aria-hidden="true">Tue 9:41</span>
+            </div>
+          </div>
+
+          <div class="popover glass" role="group" aria-label="Limiar menu">
+            <div class="pop__pct"><span data-pct>80</span>%</div>
+            <div class="pop__status"><span class="dot" data-dot></span><span data-status>Paused — resumes at 75%</span></div>
+
+            <div class="pop__card">
+              <div class="pop__row">
+                <strong data-i18n="replica.limit">Charge Limit</strong>
+                <span class="switch" aria-hidden="true"><span></span></span>
+              </div>
+              <div class="range__labels">
+                <div><small data-i18n="replica.stops">Stops at</small><b class="is-green"><span data-limit-label>80</span>%</b></div>
+                <div class="is-right"><small data-i18n="replica.resumes">Resumes at</small><b class="is-orange"><span data-resume-label>75</span>%</b></div>
+              </div>
+              <div class="range" data-range>
+                <div class="range__level" data-level></div>
+                <div class="range__band" data-band></div>
+                <button class="range__thumb range__thumb--resume" type="button" role="slider" data-thumb="resume"
+                        aria-label="Resume charging at" aria-valuemin="20" aria-valuemax="79" aria-valuenow="75"></button>
+                <button class="range__thumb range__thumb--limit" type="button" role="slider" data-thumb="limit"
+                        aria-label="Stop charging at" aria-valuemin="50" aria-valuemax="100" aria-valuenow="80"></button>
+              </div>
+            </div>
+
+            <div class="pop__actions">
+              <span class="glass-btn"><svg viewBox="0 0 12 16" width="10" height="13" aria-hidden="true"><path fill="currentColor" d="M7 0 0 9h5l-1 7 7-9H6z"/></svg><span data-i18n="replica.charge">Charge to 100%</span></span>
+              <span class="glass-btn">↓ <span data-i18n="replica.discharge">Discharge…</span></span>
+            </div>
+            <div class="pop__footer">
+              <small data-i18n="replica.health">Health 100% · 38 cycles</small>
+              <span class="circle-btn" aria-hidden="true">⚙︎</span>
+              <span class="circle-btn" aria-hidden="true">⏻</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="magsafe" aria-hidden="true">
+          <div class="magsafe__cable"></div>
+          <div class="magsafe__plug"><span class="magsafe__led" data-led></span></div>
+        </div>
+        <figcaption class="stage__caption" data-i18n="replica.caption">Try it: drag the handles. The MagSafe light follows Limiar.</figcaption>
+      </figure>
+    </section>
+
+    <!-- Problem -->
+    <section class="section problem reveal">
+      <p class="eyebrow" data-i18n="problem.eyebrow">Why it exists</p>
+      <h2 data-i18n-html="problem.title">“Will charge to 80%.”<br><span class="muted">Charges to 100%.</span></h2>
+      <p class="lead" data-i18n="problem.body">On macOS 27 the built-in charge limit often doesn't hold, and the apps that used to fix it — AlDente, batt, Battery Toolkit — stopped working when Apple removed the hardware keys they relied on. Limiar uses the one that's left.</p>
+    </section>
+
+    <!-- Features -->
+    <section class="section" id="features">
+      <div class="section__head reveal">
+        <p class="eyebrow" data-i18n="features.eyebrow">Features</p>
+        <h2 data-i18n="features.title">Everything a charge limit should be. Nothing else.</h2>
+      </div>
+      <div class="grid">
+        <article class="card glass reveal">
+          <div class="card__icon card__icon--range" aria-hidden="true"></div>
+          <h3 data-i18n="f.range.t">Your range</h3>
+          <p data-i18n="f.range.d">Stop at 80%, resume at 75% — or any levels you like, set with one slider.</p>
+        </article>
+        <article class="card glass reveal">
+          <div class="card__icon card__icon--led" aria-hidden="true"></div>
+          <h3 data-i18n="f.led.t">MagSafe tells you</h3>
+          <p data-i18n="f.led.d">Green while Limiar holds the charge. Orange while it charges. No need to look at the screen.</p>
+        </article>
+        <article class="card glass reveal">
+          <div class="card__icon card__icon--menubar" aria-hidden="true"></div>
+          <h3 data-i18n="f.menubar.t">Lives in the menu bar</h3>
+          <p data-i18n="f.menubar.d">A battery icon with the percentage inside, in the same colour as the MagSafe light.</p>
+        </article>
+        <article class="card glass reveal">
+          <div class="card__icon card__icon--bolt" aria-hidden="true"></div>
+          <h3 data-i18n="f.full.t">100% when you need it</h3>
+          <p data-i18n="f.full.d">Heading out? Charge to full once. The limit comes back when you unplug.</p>
+        </article>
+        <article class="card glass reveal">
+          <div class="card__icon card__icon--moon" aria-hidden="true"></div>
+          <h3 data-i18n="f.sleep.t">Awake while you sleep</h3>
+          <p data-i18n="f.sleep.d">Lid closed overnight? Limiar plans ahead so it never overshoots while your Mac sleeps.</p>
+        </article>
+        <article class="card glass reveal">
+          <div class="card__icon card__icon--shield" aria-hidden="true"></div>
+          <h3 data-i18n="f.safe.t">Fails safe</h3>
+          <p data-i18n="f.safe.d">If anything stops Limiar, normal charging comes straight back. Open source, MIT licensed.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="section" id="how">
+      <div class="section__head reveal">
+        <p class="eyebrow" data-i18n="how.eyebrow">How it works</p>
+        <h2 data-i18n="how.title">A threshold, not a timer.</h2>
+      </div>
+      <ol class="steps">
+        <li class="step reveal">
+          <span class="step__led step__led--orange" aria-hidden="true"></span>
+          <h3 data-i18n="how.1.t">Charges to your limit</h3>
+          <p data-i18n="how.1.d">Plugged in below the limit, your Mac charges normally.</p>
+        </li>
+        <li class="step reveal">
+          <span class="step__led step__led--green" aria-hidden="true"></span>
+          <h3 data-i18n="how.2.t">Holds the line</h3>
+          <p data-i18n="how.2.d">At the limit, Limiar disconnects wall power through the SMC. Your Mac runs on battery, still plugged in.</p>
+        </li>
+        <li class="step reveal">
+          <span class="step__led step__led--orange" aria-hidden="true"></span>
+          <h3 data-i18n="how.3.t">Resumes on cue</h3>
+          <p data-i18n="how.3.d">When the battery drifts down to your resume level, power comes back and the cycle repeats.</p>
+        </li>
+      </ol>
+      <p class="tech reveal" data-i18n-html="how.tech">Under the hood: macOS 27 removed <code>CHTE</code>, <code>CH0B</code> and <code>CH0C</code> and locked the firmware charge band. Limiar uses <code>CHIE</code>, which cuts adapter input, from a small root service registered with <code>SMAppService</code>.</p>
+    </section>
+
+    <!-- Install -->
+    <section class="section install reveal" id="install">
+      <div class="section__head">
+        <p class="eyebrow" data-i18n="install.eyebrow">Install</p>
+        <h2 data-i18n="install.title">Up and running in a minute.</h2>
+      </div>
+      <ol class="install__list">
+        <li><b>1</b><span data-i18n-html="install.1">Download the <code>.dmg</code> and drag Limiar to Applications.</span></li>
+        <li><b>2</b><span data-i18n-html="install.2">First launch: <strong>right-click › Open</strong>. Limiar is free and not notarized by Apple.</span></li>
+        <li><b>3</b><span data-i18n-html="install.3">Click <strong>Turn On Charge Limit</strong> and allow Limiar in System Settings.</span></li>
+      </ol>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section faq" id="faq">
+      <div class="section__head reveal">
+        <p class="eyebrow">FAQ</p>
+        <h2 data-i18n="faq.title">Questions, answered.</h2>
+      </div>
+      <div class="faq__list reveal">
+        <details><summary data-i18n="faq.1.q">Is it safe for my Mac?</summary><p data-i18n="faq.1.a">Limiar only switches wall power on and off — the same thing that happens when you unplug the cable. If the service stops for any reason, it restores normal charging first.</p></details>
+        <details><summary data-i18n="faq.2.q">Why does it need permission to run in the background?</summary><p data-i18n="faq.2.a">Talking to the battery controller requires administrator privileges. Limiar keeps that part in a tiny service you approve once in System Settings; the app itself runs as you.</p></details>
+        <details><summary data-i18n="faq.3.q">Which Macs are supported?</summary><p data-i18n="faq.3.a">MacBooks with Apple Silicon on macOS 26 or later. It's built for macOS 27 and tested on a MacBook Air M4. If it doesn't work on yours, please open an issue.</p></details>
+        <details><summary data-i18n="faq.4.q">Why isn't it on the App Store?</summary><p data-i18n="faq.4.a">The App Store doesn't allow apps that control hardware like this. Limiar is distributed on GitHub, free, with all the source code.</p></details>
+        <details><summary data-i18n="faq.5.q">How do I uninstall it?</summary><p data-i18n="faq.5.a">Open Settings… › Background service › Remove…, then move Limiar to the Trash. Charging goes back to normal immediately.</p></details>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="section final reveal">
+      <img src="/assets/icon-512.png" width="96" height="96" alt="" loading="lazy">
+      <h2 data-i18n="final.title">Give your battery a threshold.</h2>
+      <div class="hero__cta">
+        <a class="btn btn--primary" data-download href="https://github.com/Jonorusc/limiar/releases/latest"><span data-i18n="hero.download">Download for Mac</span></a>
+        <a class="btn btn--glass" href="https://github.com/Jonorusc/limiar" target="_blank" rel="noopener">★ <span data-i18n="final.star">Star on GitHub</span> <span class="btn__stars" data-stars-inline hidden></span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <span>© 2026 Limiar · <a href="https://github.com/Jonorusc/limiar/blob/main/LICENSE" target="_blank" rel="noopener" data-i18n="footer.license">MIT License</a></span>
+      <span data-i18n="footer.made">Made in Brazil 🇧🇷</span>
+    </div>
+  </footer>
+</body>
+</html>
